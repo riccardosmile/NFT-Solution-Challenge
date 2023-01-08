@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --line-bg: hsl(215, 32%, 27%);
+    --text-hover: hsl(178, 100%, 50%);
+    --text-color:  hsl(215, 51%, 70%);
+}
+
+body{
+    position:relative;
+    font-family: 'Outfit' , sans-serif;
+    background-color: var(--main-bg);
+    height: 500px;
+}
+
+.container{
+    position: absolute; 
+    top: 50%;                      
+    left: 50%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 20rem;
+    
+}
+
+.card{
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+/* #region images */
+
+.image-card{
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    max-width: 20rem;
+    position: relative;
+}
+
+.image-main{
+    background-image: url('image-equilibrium.jpg');
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100%;
+    min-height: 17rem;
+    border-radius: 10px;
+}
+.image-hover{
+    position: absolute;
+    top: 0;
+    background-image: none;
+    width: 100%;
+    height: auto;
+    min-height: 17rem;
+}
+
+.image-hover:hover{
+    background-image: url('icon-view.svg');
+    background-color: var(--text-hover);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border-radius: 10px;
+    opacity: 0.7;
+    transition: background-color 0.4s ease-in-out;
+}
+/* #endregion images */
+
+/* #region text */
+
+.text{
+    padding-top: 17px;
+}
+
+.tag{
+    color: white;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.description{
+    padding-top: 0.7rem;
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+.tag:hover{
+    color: var(--text-hover);
+    cursor: pointer;
+    transition: all 0.4s ease;    
+}
+/* #endregion text */
+
+/* #region info */
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.2rem;
+}
+
+.price-img{
+    background-image: url('icon-ethereum.svg');
+}
+
+
+.data-img{
+    background-image: url('icon-clock.svg');
+}
+
+.price, .data{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0px 7px;
+}
+
+.price-img, .data-img{
+    min-width: 13px;
+    min-height: 13px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.price p{
+    font-weight: 600;
+    color: var(--text-hover);
+}
+
+.data p{
+    font-weight: 300;
+    color: var(--text-color);
+}
+/* #endregion info */
+
+/* #region credits */
+
+hr{
+    border: solid 0.7px var(--line-bg);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+.credits{
+    display: flex;
+    align-items: center;
+    gap: 0px 10px;
+}
+
+.credits-image{
+    background-image: url('image-avatar.png');
+    border: 0.5px solid white;
+    background-size: cover;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.creator{
+    color: white;
+}
+
+.credits p{
+    color: var(--text-color);
+}
+
+.creator:hover{
+    color: var(--text-hover);
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+
+/* #endregion credits */
+
+
+
